@@ -1,0 +1,34 @@
+<div class="appointments-box">
+  <div class="appointments-box__header">
+    <h1 class="appointments-box__header__title">Consulta Clínica</h1>
+    <app-button size="small"
+      ><fa-icon [icon]="faPlus"></fa-icon> Nova Consulta</app-button
+    >
+  </div>
+  <div class="appointments-box__body">
+    <table class="appointments-table" cellspacing="0">
+      <thead>
+        <tr>
+          <td>Especialidade</td>
+          <td>Profissional</td>
+          <td>Data</td>
+          <td>Hora</td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of appointments$ | async">
+          <td>{{ appointment.medico.especialidade.nome }}</td>
+          <td>{{ appointment.medico.nome }}</td>
+          <td>{{ appointment.dia }}</td>
+          <td>{{ appointment.horario }}</td>
+          <td>
+            <app-button-link>
+              <fa-icon [icon]="faTimes"></fa-icon>Desmarcar
+            </app-button-link>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

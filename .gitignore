@@ -1,0 +1,6 @@
+# Editor
+.vscode
+
+# Frontend
+node_modules/
+coverage/

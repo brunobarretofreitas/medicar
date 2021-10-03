@@ -1,0 +1,18 @@
+.register-box {
+  width: 400px;
+
+  &__header__title {
+    color: #444444;
+    font-size: 18px;
+    font-weight: bold;
+
+    margin: 20px 0;
+  }
+
+  &__buttons {
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+}

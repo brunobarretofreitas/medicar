@@ -1,0 +1,29 @@
+<div class="form-group">
+  <input
+    class="form-control"
+    [type]="type"
+    [(ngModel)]="value"
+    [disabled]="disabled"
+    [placeholder]="label"
+  />
+
+  <label class="form-label">{{ label }}</label>
+
+  <!-- Password hidden -->
+  <fa-icon
+    (click)="toggleShowPassword()"
+    class="form-password-logo"
+    *ngIf="type === 'password' && !showPassword"
+    [icon]="faEye"
+    size="2x"
+  ></fa-icon>
+
+  <!-- Reveal password -->
+  <fa-icon
+    (click)="toggleShowPassword()"
+    class="form-password-logo"
+    *ngIf="type === 'text' && showPassword"
+    [icon]="faEyeSlash"
+    size="2x"
+  ></fa-icon>
+</div>

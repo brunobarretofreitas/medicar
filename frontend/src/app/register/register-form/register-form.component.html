@@ -1,0 +1,31 @@
+<div class="register-box">
+  <div class="register-box__header">
+    <img class="register-box__logo" src="assets/img/Logo.svg" alt="Logo" />
+
+    <h1 class="register-box__header__title">Crie sua conta</h1>
+  </div>
+
+  <div class="register-box__body">
+    <form method="POST" [formGroup]="form">
+      <!-- Inputs -->
+      <app-input formControlName="username" label="Nome"></app-input>
+      <app-input formControlName="email" label="Email"> </app-input>
+      <app-input formControlName="password" label="Senha" type="password">
+      </app-input>
+      <app-input
+        formControlName="confirmPassword"
+        label="Confirmar Senha"
+        type="password"
+      >
+      </app-input>
+
+      <!-- Buttons -->
+      <div class="register-box__buttons">
+        <app-button (onClick)="navigateToLogin()" theme="secondary"
+          >Cancelar</app-button
+        >
+        <app-button type="submit">Confirmar</app-button>
+      </div>
+    </form>
+  </div>
+</div>

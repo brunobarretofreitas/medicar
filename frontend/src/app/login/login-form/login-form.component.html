@@ -1,0 +1,30 @@
+<div class="login-box">
+  <div class="login-box__header">
+    <img class="login-box__logo" src="assets/img/Logo.svg" alt="Logo" />
+  </div>
+
+  <div class="login-box__body">
+    <form method="POST" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <!-- Inputs -->
+      <app-input formControlName="username" label="Email ou Login"> </app-input>
+
+      <app-input formControlName="password" label="Senha" type="password">
+      </app-input>
+
+      <app-checkbox
+        formControlName="rememberPassword"
+        label="Lembrar minha senha"
+      ></app-checkbox>
+
+      <!-- Buttons -->
+      <div class="login-box__buttons">
+        <app-button (onClick)="navigateToRegister()" theme="secondary"
+          >Criar Conta</app-button
+        >
+        <app-button [isDisabled]="performingLogin$ | async" type="submit"
+          >Acessar</app-button
+        >
+      </div>
+    </form>
+  </div>
+</div>

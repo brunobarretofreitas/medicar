@@ -1,0 +1,31 @@
+.navbar {
+  width: 100%;
+
+  padding: 18px 0;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo img {
+    width: 90px;
+  }
+
+  &__actions {
+    span {
+      color: #a8a8a8;
+      font-size: 13px;
+    }
+    a {
+      color: #49b4bb;
+      font-size: 13px;
+      text-decoration: none;
+    }
+    &__item {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+}

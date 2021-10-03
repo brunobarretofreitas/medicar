@@ -1,0 +1,14 @@
+.login-box {
+  width: 400px;
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__buttons {
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+}
